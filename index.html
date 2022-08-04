@@ -1,8 +1,17 @@
 <html>
     <head>
         <title>Learn reCAPTCHA</title>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script>
+            function onSubmit(token) {
+                console.log("token: " + token);
+            }
+        </script>
     </head>
     <body>
-        Hello!
+        <form id="demo-form" action="?" method="POST">
+            <button class="g-recaptcha" data-sitekey="6LfV-UghAAAAADP4UlMLNNHqgzdbmb65fiS_q1-M" data-callback="onSubmit">Submit</button>
+            <br/>
+        </form>
     </body>
 </html>
